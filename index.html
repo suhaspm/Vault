@@ -758,7 +758,7 @@ function saveState() {
 }
 
 function initState() {
-  const base = 5000 + Math.random() * 15000;
+  const base = 50000 + Math.random() * 15000;
   const jars = {};
   JAR_DEFS.forEach(j => {
     jars[j.id] = +(base * j.pct / 100).toFixed(2);
