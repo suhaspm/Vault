@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Wealth Vault</title>
+<title>Wealth Bank</title>
 
 <!-- Web App Manifest & Mobile Optimization Configuration Meta Tags -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Wealth Vault">
+<meta name="apple-mobile-web-app-title" content="Wealth Bank">
 <meta name="mobile-web-app-capable" content="yes">
 
 <!-- Custom HD Geometric App Icons for Mobile Device Home Screen App Launches (Inline Vector Data Layer) -->
@@ -189,7 +189,7 @@
     margin-bottom: 10px;
   }
   .total-amount {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Monserrat', serif;
     font-size: 46px;
     font-weight: 300;
     color: var(--text);
@@ -552,11 +552,19 @@
     <div class="auth-wrap">
       <div class="auth-logo">
         <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- You can keep the gold border circle if you want to frame your image -->
           <circle cx="32" cy="32" r="28" stroke="#d4a843" stroke-width="2"/>
-          <polygon points="32,18 42,28 32,38 22,28" fill="#d4a843"/>
-          <rect x="30" y="38" width="4" height="10" fill="#d4a843"/>
+          
+          <!-- Replace the inner shapes with the image element -->
+          <image 
+            href="data:image/jpeg;base64,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" 
+            x="16" 
+            y="16" 
+            width="32" 
+            height="32" 
+          />
         </svg>
-        <div class="auth-heading">WEALTH VAULT</div>
+        <div class="auth-heading">WEALTH BANK</div>
         <div class="auth-subtitle">PRIVATE ACCESS INTERFACE</div>
       </div>
       
@@ -572,7 +580,7 @@
       
       <div class="auth-error" id="auth-error-msg">Invalid Vault Credentials</div>
       
-      <button class="login-btn" onclick="executeAuthentication()">INITIALIZE VAULT</button>
+      <button class="login-btn" onclick="executeAuthentication()">LOGIN TO VAULT</button>
     </div>
   </div>
 
@@ -580,13 +588,13 @@
   <div class="screen" id="screen-home">
     <div class="scroll-area">
       <div class="top-bar">
-        <div class="app-name">WEALTH VAULT</div>
+        <div class="app-name">WEALTH BANK</div>
         <div class="avatar" onclick="executeLogout()" title="Click to Logout Account">S</div>
       </div>
 
       <!-- Total Balance -->
       <div class="balance-hero">
-        <div class="balance-label">Total Net Worth</div>
+        <div class="balance-label">Net Balance</div>
         <div class="total-amount" id="total-display">
           <span class="euro">€</span><span id="total-num">0</span>
         </div>
@@ -758,7 +766,7 @@ function saveState() {
 }
 
 function initState() {
-  const base = 50000 + Math.random() * 15000;
+  const base = 5000 + Math.random() * 15000;
   const jars = {};
   JAR_DEFS.forEach(j => {
     jars[j.id] = +(base * j.pct / 100).toFixed(2);
