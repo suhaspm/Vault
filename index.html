@@ -766,7 +766,7 @@ function saveState() {
 }
 
 function initState() {
-  const base = 100000 + Math.random() * 15000;
+  const base = 100000 + Math.random() * 50000;
   const jars = {};
   JAR_DEFS.forEach(j => {
     jars[j.id] = +(base * j.pct / 100).toFixed(2);
@@ -793,7 +793,7 @@ function triggerDailyGain(manual = false) {
   const today = todayStr();
   if (!manual && state.lastGainDate === today) return;
 
-  const gain = 50000 + Math.random() * 100000;
+  const gain = 100000 + Math.random() * 50000;
   const rounded = +gain.toFixed(2);
 
   JAR_DEFS.forEach(j => {
@@ -822,7 +822,7 @@ function triggerDailyGain(manual = false) {
 }
 
 function addManualGain() {
-  const gain = 10000 + Math.random() * 40000;
+  const gain = 100000 + Math.random() * 50000;
   const rounded = +gain.toFixed(2);
   JAR_DEFS.forEach(j => {
     state.jars[j.id] = +(state.jars[j.id] + rounded * j.pct / 100).toFixed(2);
